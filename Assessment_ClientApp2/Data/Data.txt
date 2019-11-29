@@ -1,0 +1,7 @@
+﻿Sid,145,01/16/1874,happy,lunar,true
+Lucy,125,03/22/1894,bored,polar,true
+Bill,934,07/29/1085,sad,tropic,true
+Pops,987,04/30/1032,bored,solar,true
+Kelp,8,09/01/2011,sad,tropic,true
+Boo Boo,300,02/28/1719,angry,lunar,true
+Peach,98,05/15/1921,happy,solar,true
