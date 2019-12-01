@@ -506,7 +506,7 @@ namespace Assessment_ClientApp2
             // update monster properties
             //
             string userResponse;
-            Console.WriteLine();
+            DisplayScreenHeader("Update");
             Console.WriteLine("\tReady to update. Press the Enter Key to keep the current info.");
             Console.WriteLine();
             Console.Write($"\tCurrent Name: {selectedMonster.Name} New Name: ");
@@ -525,20 +525,25 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid age. Please enter a numerical value.");
                     Console.WriteLine();
                     Console.Write("\tAge: ");
-                    int.TryParse(userResponse, out age);
+                    int.TryParse(Console.ReadLine(), out age);
                     selectedMonster.Age = age;
                 } 
             }
 
             Console.Write($"\tCurrent Birthdate: {selectedMonster.Birthdate:d} New Birthdate: ");
-            if (!DateTime.TryParse(Console.ReadLine(), out DateTime birthdate))
+            userResponse = Console.ReadLine();
+            if (userResponse != "")
             {
-                Console.WriteLine("\tThis is not a valid birthdate. Please enter a numerical value in the MM/DD/YYYY format.");
-                Console.WriteLine();
-                Console.Write("\tBirthdate: ");
-                DateTime.TryParse(Console.ReadLine(), out birthdate);
-                selectedMonster.Birthdate = birthdate;
+                if (!DateTime.TryParse(Console.ReadLine(), out DateTime birthdate))
+                {
+                    Console.WriteLine("\tThis is not a valid birthdate. Please enter a numerical value in the MM/DD/YYYY format.");
+                    Console.WriteLine();
+                    Console.Write("\tBirthdate: ");
+                    DateTime.TryParse(Console.ReadLine(), out birthdate);
+                    selectedMonster.Birthdate = birthdate;
+                }
             }
+
 
             Console.Write($"\tCurrent Attitude: {selectedMonster.Attitude} New Attitude: ");
             userResponse = Console.ReadLine();
@@ -549,7 +554,7 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid attitude. Please enter 'sad', 'happy', 'angry', or 'bored'.");
                     Console.WriteLine();
                     Console.Write("\tAttitude: ");
-                    Enum.TryParse(userResponse, out attitude);
+                    Enum.TryParse(Console.ReadLine(), out attitude);
                     selectedMonster.Attitude = attitude;
                 }
             }
@@ -563,7 +568,7 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid tribe. Please enter 'polar', 'solar', 'lunar', or 'tropic'.");
                     Console.WriteLine();
                     Console.Write("\tTribe: ");
-                    Enum.TryParse(userResponse, out tribe);
+                    Enum.TryParse(Console.ReadLine(), out tribe);
                     selectedMonster.MonsterTribe = tribe;
                 }
             }
@@ -577,7 +582,7 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid response. Please enter 'true' or 'false'.");
                     Console.WriteLine();
                     Console.Write("\tActive?");
-                    bool.TryParse(userResponse, out active);
+                    bool.TryParse(Console.ReadLine(), out active);
                     selectedMonster.Active = active;
                 }
             }
