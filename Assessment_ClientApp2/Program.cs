@@ -527,7 +527,11 @@ namespace Assessment_ClientApp2
                     Console.Write("\tAge: ");
                     int.TryParse(Console.ReadLine(), out age);
                     selectedMonster.Age = age;
-                } 
+                }
+                else
+                {
+                    selectedMonster.Age = age;
+                }
             }
 
             Console.Write($"\tCurrent Birthdate: {selectedMonster.Birthdate:d} New Birthdate: ");
@@ -540,6 +544,10 @@ namespace Assessment_ClientApp2
                     Console.WriteLine();
                     Console.Write("\tBirthdate: ");
                     DateTime.TryParse(Console.ReadLine(), out birthdate);
+                    selectedMonster.Birthdate = birthdate;
+                }
+                else
+                {
                     selectedMonster.Birthdate = birthdate;
                 }
             }
@@ -557,6 +565,10 @@ namespace Assessment_ClientApp2
                     Enum.TryParse(Console.ReadLine(), out attitude);
                     selectedMonster.Attitude = attitude;
                 }
+                else
+                {
+                    selectedMonster.Attitude = attitude;
+                }
             }
 
             Console.Write($"\tCurrent Tribe: {selectedMonster.MonsterTribe} New Tribe: ");
@@ -571,6 +583,10 @@ namespace Assessment_ClientApp2
                     Enum.TryParse(Console.ReadLine(), out tribe);
                     selectedMonster.MonsterTribe = tribe;
                 }
+                else
+                {
+                    selectedMonster.MonsterTribe = tribe;
+                }
             }
 
             Console.Write($"\tCurrent Active Status: {selectedMonster.Active} New Active Status: ");
@@ -583,6 +599,10 @@ namespace Assessment_ClientApp2
                     Console.WriteLine();
                     Console.Write("\tActive?");
                     bool.TryParse(Console.ReadLine(), out active);
+                    selectedMonster.Active = active;
+                }
+                else
+                {
                     selectedMonster.Active = active;
                 }
             }
