@@ -347,6 +347,7 @@ namespace Assessment_ClientApp2
                 Console.WriteLine("\tThis is not a valid tribe. Please enter 'lunar', 'solar', 'lunar', or 'tropic'.");
                 Console.WriteLine();
                 Console.Write("\tTribe: ");
+                Enum.TryParse(Console.ReadLine(), out tribe);
                 newMonster.MonsterTribe = tribe;
             }
             else
@@ -524,6 +525,7 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid age. Please enter a numerical value.");
                     Console.WriteLine();
                     Console.Write("\tAge: ");
+                    int.TryParse(userResponse, out age);
                     selectedMonster.Age = age;
                 } 
             }
@@ -547,6 +549,7 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid attitude. Please enter 'sad', 'happy', 'angry', or 'bored'.");
                     Console.WriteLine();
                     Console.Write("\tAttitude: ");
+                    Enum.TryParse(userResponse, out attitude);
                     selectedMonster.Attitude = attitude;
                 }
             }
@@ -560,6 +563,7 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid tribe. Please enter 'polar', 'solar', 'lunar', or 'tropic'.");
                     Console.WriteLine();
                     Console.Write("\tTribe: ");
+                    Enum.TryParse(userResponse, out tribe);
                     selectedMonster.MonsterTribe = tribe;
                 }
             }
@@ -573,6 +577,7 @@ namespace Assessment_ClientApp2
                     Console.WriteLine("\tThis is not a valid response. Please enter 'true' or 'false'.");
                     Console.WriteLine();
                     Console.Write("\tActive?");
+                    bool.TryParse(userResponse, out active);
                     selectedMonster.Active = active;
                 }
             }
